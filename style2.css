@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+/*computadora*/
+.barras{display: none;}
+.desplegable{background:  black;}
+ul{ display: flex;
+    flex-direction: row;
+}
+ul li{
+    padding: 10px;
+    list-style: none;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+}
+nav ul li:hover{
+    background: #393939;
+} 
+/* tablet*/
+@media (max-width: 850px){
+
+.barras{
+    background-color:  black;
+    display: block;
+}
+.desplegable{
+    background: none;
+    transform: translate(-100%);
+    transition: 0.5s;
+    font-size: 1.5rem;
+    width: 50%;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+}
+a{
+    padding: 0%;
+}
+a{
+    font-size: 1.5rem;
+    padding: 20px 0px 20px 20px;
+    display: block;
+    text-align: left;
+}
+.boton_menu{
+    background-image: url('menu.png');
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+    background-position: center;
+}
+button{
+    margin: 5px;
+    border: none;
+    margin: 10px 10px 10px 20px;
+}
+/*con esta clase cierro y abro el menun con toggle*/
+.abrir_menu{
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(2px);
+    transform: translate(0%);
+    width: 50%;
+    transition: 0.5s;
+}
+/*con esta clase cambio las barras por una x*/
+.colocar_x{
+    background-image: url('x.png');
+    
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+    background-position: center;
+}
+}
+@media (max-width: 500px){
+    .desplegable{
+        width: 100%;
+        height: 40vh;
+        font-size: 1.6rem;
+    }
+}  
+.inicio-ducati {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    position: relative;
+    background: url('https://www.ducati.com/ww/en/homepage/_jcr_content/root/container/container/container/image.coreimg.jpeg') no-repeat center center/cover;
+}
+
+.inicio-ducati::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.contenido-ducati {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+}
+
+.contenido-ducati h1 {
+    font-size: 3rem;
+    color: #e60000;
+    margin-bottom: 20px;
+}
+
+.contenido-ducati p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.btn-ducati {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e60000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-ducati:hover {
+    background-color: #c20000;
+}
+.modelos-ducati {
+    padding: 60px 20px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.modelos-ducati h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e60000;
+}
+
+.contenedor-modelos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-modelo {
+    background-color: #1a1a1a;
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.tarjeta-modelo img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tarjeta-modelo h3 {
+    color: #e60000;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-modelo p {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor-modelos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.historia-ducati {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.historia-ducati h2 {
+    color: #e60000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.historia-ducati p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+    line-height: 1.6;
+}
+.contacto-ducati {
+    background-color: #111;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contacto-ducati h2 {
+    color: #e60000;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contacto-ducati p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.lista-contacto {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-contacto li {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #e60000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
